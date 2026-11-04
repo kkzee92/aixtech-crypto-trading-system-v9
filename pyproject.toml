@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crypto-trading"
+version = "0.9.0"
+description = "Paper-only automated cryptocurrency trading information system v9"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.0",
+    "numpy>=1.24",
+    "pandas>=2.0",
+]
+
+[project.optional-dependencies]
+dev = ["ruff", "pytest", "pytest-cov"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
